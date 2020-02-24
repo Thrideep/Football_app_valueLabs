@@ -1,0 +1,31 @@
+@import '_mixins';
+
+.season {
+  padding-left: 30px;
+}
+
+.teams-data {
+  padding: 10px 0 10px 30px;
+  min-height: 200px;
+  overflow-y: auto;
+}
+
+.table {
+  display: table;
+  border: 1px solid grey;
+  border-style: inherit;
+
+  .tr {
+    display: table-row;
+
+    .td, .th {
+      display: table-cell;
+      padding: 10px;
+      border: 1px solid grey;
+    }
+
+    .link {
+      @include link;
+    }
+  }
+}

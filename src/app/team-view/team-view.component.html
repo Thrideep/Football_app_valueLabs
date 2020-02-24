@@ -1,0 +1,35 @@
+<div class="season">
+  <mat-form-field>
+    <mat-select (selectionChange)="onChange($event)">
+      <mat-option value="season-1718">season-1718</mat-option>
+      <mat-option value="season-1819">season-1819</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<ng-container *ngIf="hasSeason">
+  <div class="teams-data" *ngIf="teamsData?.length; else noDataMsg">
+    <div class="table">
+      <div class="tr">
+        <div class="th"><strong>Rank</strong></div>
+        <div class="th"><strong>Team</strong></div>
+        <div class="th"><strong>Matches Played</strong></div>
+        <div class="th"><strong>Goals For</strong></div>
+        <div class="th"><strong>Goals Against</strong></div>
+        <div class="th"><strong>Points</strong></div>
+      </div>
+      <div class="tr" *ngFor="let team of teamsData">
+        <div class="td">{{team.rank}}</div>
+        <div class="td link" [routerLink]="['/team', team.name]">{{team.name}}</div>
+        <div class="td">{{team.matchesPlayed}}</div>
+        <div class="td">{{team.goalsFor}}</div>
+        <div class="td">{{team.goalsAgainst}}</div>
+        <div class="td">{{team.points}}</div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #noDataMsg>
+  No data found for the selected season.
+</ng-template>

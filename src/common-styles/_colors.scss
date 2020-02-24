@@ -1,0 +1,41 @@
+// This sass file serves as a repository of the sample applicaton palette.
+
+$moderate-blue:#3f51b5;
+
+// Gray palette:
+$white: white;
+$light-gray: #F2F2F2;
+$gray: #9B9B9B;
+$dark-gray: #4A4A4A;
+
+// Blue palette:
+$light-blue: #C3D5F1;
+$secondary-blue: #5798dc;
+$primary-blue: #0032A0;
+
+// Green palette:
+$primary-green: #00B140;
+
+// Red palette:
+$primary-red: #F44336;
+
+// Yellow palette:
+$primary-yellow: #FFC106;
+
+// Purple palette:
+$light-purple: #D6BCED;
+$dark-purple: #782FB8;
+
+// Semantic palette:
+$warning: $primary-yellow;
+$error: $primary-red;
+$success: $primary-green;
+
+// Gradients
+$gray-to-light-gray-gradient: linear-gradient(0deg,#f8f8f8 0%, #efeaed 100%);
+$black-to-transparent-gradient: linear-gradient(rgba(0, 0, 0, .1), transparent);
+
+//Profile colors
+$listing: #35fd35;
+$standard: #53A2FF;
+$all-commerce: #FFD700;

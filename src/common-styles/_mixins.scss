@@ -1,0 +1,23 @@
+@mixin link {
+  color: #2b80d5;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@mixin link-visited {
+  color: black;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column($grow: 0) {
+  display: flex;
+  flex-direction: column;
+
+  @if($grow > 0) {
+    flex-grow: $grow;
+  }
+}

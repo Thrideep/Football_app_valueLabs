@@ -1,0 +1,7 @@
+<div class="container">
+  <input type="file" (change)="onFileSelected($event)" [accept]="allowedTypes" />
+  <br /><br />
+  <button mat-raised-button color="primary" (click)="onUpload()" [disabled]="!selectedFiles?.length">Upload</button>
+  <P *ngIf="uploadSuccess">File uploaded successfully.</P>
+  <P class="error" *ngIf="uploadFailed">Error occurred while uploading a file. </P>
+</div>

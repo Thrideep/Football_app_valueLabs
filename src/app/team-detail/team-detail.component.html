@@ -1,0 +1,9 @@
+<div class="container" *ngIf="teamDetails">
+  <div> {{teamDetails.name}} ({{teamDetails.rank}})</div>
+  <ul>
+    <li>Total points - {{teamDetails.points}}</li>
+    <li>Matches Played - {{teamDetails.matchesPlayed}}</li>
+    <li>Goals For - {{teamDetails.goalsFor}}</li>
+    <li>Goals Against - {{teamDetails.goalsAgainst}}</li>
+  </ul>
+</div>

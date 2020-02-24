@@ -1,0 +1,47 @@
+@import '../node_modules/@angular/material/_theming.scss';
+// Plus imports for other components in your app.
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+
+/* For use in src/lib/core/theming/_palette.scss */
+
+$md-app-blue: ( 50: #e0e6f4, 100: #b3c2e3, 200: #8099d0, 300: #4d70bd, 400: #2651ae, 500: #0032a0, 600: #002d98, 700: #00268e, 800: #001f84, 900: #001373, A100: #a1aaff, A200: #6e7bff, A400: #3b4dff, A700: #2236ff, contrast: ( 50: #000000, 100: #000000, 200: #000000, 300: #ffffff, 400: #ffffff, 500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff, A100: #000000, A200: #000000, A400: #ffffff, A700: #ffffff, ));
+$md-app-accent: ( 50: #e0f6e8, 100: #b3e8c6, 200: #80d8a0, 300: #4dc879, 400: #26bd5d, 500: #00b140, 600: #00aa3a, 700: #00a132, 800: #00982a, 900: #00881c, A100: #b4ffbe, A200: #81ff92, A400: #4eff65, A700: #35ff4f, contrast: ( 50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #000000, 500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff, A100: #000000, A200: #000000, A400: #000000, A700: #000000, ));
+$app-primary: mat-palette($md-app-blue);
+$app-accent: mat-palette($md-app-accent);
+$app-warn: mat-palette($mat-red);
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat-light-theme( $app-primary, $app-accent, $app-warn);
+// Include theme styles for core and each component used in your app.
+@include angular-material-theme($app-theme);
+
+
+$md-app-white: ( 50 : #ffffff, 100 : #ffffff, 200 : #ffffff, 300 : #ffffff, 400 : #ffffff, 500 : #ffffff, 600 : #ffffff, 700 : #ffffff, 800 : #ffffff, 900 : #ffffff, A100 : #ffffff, A200 : #ffffff, A400 : #ffffff, A700 : #ffffff, contrast: ( 50 : #000000, 100 : #000000, 200 : #000000, 300 : #000000, 400 : #000000, 500 : #000000, 600 : #000000, 700 : #000000, 800 : #000000, 900 : #000000, A100 : #000000, A200 : #000000, A400 : #000000, A700 : #000000, ) );
+$md-app-light-blue: ( 50 : #eaf4ff, 100 : #cbe3ff, 200 : #a9d1ff, 300 : #87beff, 400 : #6db0ff, 500 : #53a2ff, 600 : #4c9aff, 700 : #4290ff, 800 : #3986ff, 900 : #2975ff, A100 : #ffffff, A200 : #ffffff, A400 : #d6e4ff, A700 : #bdd3ff, contrast: ( 50 : #ffffff, 100 : #ffffff, 200 : #ffffff, 300 : #ffffff, 400 : #ffffff, 500 : #ffffff, 600 : #ffffff, 700 : #ffffff, 800 : #ffffff, 900 : #ffffff, A100 : #ffffff, A200 : #ffffff, A400 : #ffffff, A700 : #ffffff, ) );
+$md-app-light-gray: (  50 : #fdfdfd,  100 : #fbfbfb,  200 : #f9f9f9,  300 : #f6f6f6,  400 : #f4f4f4,  500 : #f2f2f2,  600 : #f0f0f0,  700 : #eeeeee,  800 : #ececec,  900 : #e8e8e8,  A100 : #ffffff,  A200 : #ffffff,  A400 : #ffffff,  A700 : #ffffff,  contrast: (  50 : #000000,  100 : #000000,  200 : #000000,  300 : #000000,  400 : #000000,  500 : #000000,  600 : #000000,  700 : #000000,  800 : #000000,  900 : #000000,  A100 : #000000,  A200 : #000000,  A400 : #000000,  A700 : #000000,  )  );
+
+$app-light-theme: mat-light-theme(mat-palette($md-app-white), mat-palette($md-app-light-blue), mat-palette($md-app-light-gray));
+
+.use-light-theme {
+  @include angular-material-theme($app-light-theme);
+  .mat-form-field-ripple{
+    background-color: #53A2FF;
+  }
+}
+.inmplayer-popover{
+  z-index: 200;
+}
+.cdk-overlay-container{
+  z-index: 1002;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+

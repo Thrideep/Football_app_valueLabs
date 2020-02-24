@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'app-theme';
+@import '_app.variables';
+@import '_colors';
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  background-color: #F2F2F2;
+}
+
+app-root {
+  display: block;
+  height: inherit;
+}
